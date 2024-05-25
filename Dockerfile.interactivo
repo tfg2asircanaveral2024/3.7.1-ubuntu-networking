@@ -1,0 +1,7 @@
+# imagen diseñada para ejecutar comandos con el contenedor
+FROM ubuntu:jammy
+
+ENTRYPOINT ["bash"]
+
+# instalar los paquetes con herramientas de networking que necesitamos
+RUN apt update && apt install net-tools dnsutils iputils-ping -y
